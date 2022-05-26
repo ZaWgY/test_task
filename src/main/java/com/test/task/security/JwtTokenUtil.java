@@ -20,8 +20,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Component
 public class JwtTokenUtil {
 
-    @Value("${jwt.token.expire}")
-    public static long JWT_TOKEN_VALIDITY;
+    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
 
     @Value("${jwt.secret}")
     private String secret;
