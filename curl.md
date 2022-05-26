@@ -5,7 +5,7 @@
 
 > POST api/v1/authentication
 
-curl -i -X POST -H "Content-Type:application/json" -H "Content-Length:33" -H "Host:localhost" http://localhost:8081/api/v1/authenticate -d '{"name":"zawgy","password":"123"}'
+curl -i -X POST -H "Content-Type:application/json" -H "Content-Length:33" -H "Host:localhost" http://localhost:8081/api/v1/authenticate -d '{"name":"user","password":"123"}'
 
 В ответе получим токен
 
@@ -19,13 +19,13 @@ curl -i -X POST -H "Content-Type:application/json" -H "Content-Length:33" -H "Ho
 
 - Добавление тестовых сообщений
 
-curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"zawgy","message":"First message"}'
+curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"user","message":"First message"}'
 
 
-curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"zawgy","message":"Second message"}'
+curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"user","message":"Second message"}'
 
 
-curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"zawgy","message":"Third message"}'
+curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"user","message":"Third message"}'
 
 ---
 
@@ -33,7 +33,7 @@ curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKE
 
 > POST api/v1/messages
 
-curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"zawgy","message":"history 2"}'
+curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"user","message":"history 2"}'
 
 В ответе получим два последних сообщения пользователя
 
