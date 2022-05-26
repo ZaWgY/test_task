@@ -48,6 +48,6 @@
 ---
 
 - Загрузите проект локально
-- Выполните команду **mvn clean package**
-- Выполните команду **docker build -t inside_test:0.0.1 .**
-- Выполните команду **docker run -d -p 8080:8080 -t inside_test:0.0.1**
+- Выполните команду **mvn clean install**
+- Выполните команду **cp target/task-0.0.1-SNAPSHOT.jar src/main/docker**
+- Выполните команду **sudo docker-compose -f src/main/docker/docker-compose.yml up**
