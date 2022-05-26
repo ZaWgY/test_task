@@ -51,3 +51,8 @@
 - Выполните команду **mvn clean install**
 - Выполните команду **cp target/task-0.0.1-SNAPSHOT.jar src/main/docker**
 - Выполните команду **sudo docker-compose -f src/main/docker/docker-compose.yml up**
+
+Примечание
+---
+Ссылка на Docker hub:
+https://hub.docker.com/r/zawgy/inside-test
