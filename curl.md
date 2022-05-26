@@ -17,25 +17,23 @@ curl -i -X POST -H "Content-Type:application/json" -H "Content-Length:33" -H "Ho
 
 > POST api/v1/messages
 
-- Добавим первое сообщение пользователя:
+- Добавление тестовых сообщений
 
-curl -i -X POST -H "Content-Type:application/json" -H "Content-Length:40" -H "Authorization:Bearer ТОКЕН" -H "Host:localhost" http://localhost:8080/messages/add -d "{\"name\":\"user\",\"message\":\"Hello world1\"}"
+curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"zawgy","message":"First message"}'
 
-- Добавим второе сообщение пользователя
 
-curl -i -X POST -H "Content-Type:application/json" -H "Content-Length:40" -H "Authorization:Bearer ТОКЕН" -H "Host:localhost" http://localhost:8080/messages/add -d "{\"name\":\"user\",\"message\":\"Hello world2\"}"
+curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"zawgy","message":"Second message"}'
 
-- Добавим третье сообщение пользователя
 
-curl -i -X POST -H "Content-Type:application/json" -H "Content-Length:40" -H "Authorization:Bearer ТОКЕН" -H "Host:localhost" http://localhost:8080/messages/add -d "{\"name\":\"user\",\"message\":\"Hello world3\"}"
+curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"zawgy","message":"Third message"}'
 
 ---
 
 ### Получение последних n сообщений пользователя
 
-> GET messages/history?count=n
+> POST api/v1/messages
 
-curl -i -X GET -H "accept: application/json" -H "Authorization:Bearer ТОКЕН" -H "Host:localhost" http://localhost:8080/messages/history?count=2
+curl -i -X POST -H "Content-Type:application/json" -H "Authorization:Bearer_TOKEN" -H "Host:localhost" http://localhost:8081/api/v1/message -d '{"name":"zawgy","message":"history 2"}'
 
 В ответе получим два последних сообщения пользователя
 
